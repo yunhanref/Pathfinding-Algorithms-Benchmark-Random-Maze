@@ -2,7 +2,7 @@
 
 ---
 
-<img width="1280" height="720" alt="gif" src="https://github.com/yunhanref/Pathfinding-Algorithms-Benchmark-Random-Maze/blob/main/asset/gif.gif" />
+<img width="1280" height="720" alt="gif" src="https://github.com/yunhanref/Pathfinding-Algorithms-Benchmark-Random-Maze/blob/main/asset/gif_maze.gif" />
 
 3. **Installation:**
 ```cmd
