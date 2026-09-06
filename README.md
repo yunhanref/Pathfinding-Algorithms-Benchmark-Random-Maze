@@ -1,1 +1,1 @@
-# Pathfinding-Algorithms-Benchmark-Random-Maze
+# Benchmar Visualiser of Pathfinding Algorithms
