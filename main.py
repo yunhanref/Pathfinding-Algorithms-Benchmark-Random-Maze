@@ -5,7 +5,6 @@ from collections import deque
 from enum import Enum
 import math
 
-# --- RENK VE DURUM (STATE) TANIMLARI ---
 class Colors:
     BACKGROUND = (18, 18, 18)
     WALL = (45, 45, 45)
@@ -27,7 +26,6 @@ class State(Enum):
     START = 4
     END = 5
 
-# --- ALGORİTMA JENERATÖRLERİ (COROUTINES) ---
 def get_neighbors(grid, r, c, rows, cols):
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     neighbors = []
@@ -160,7 +158,6 @@ ALGORITHMS = {
     "Greedy": algo_greedy
 }
 
-# --- KULLANICI ARAYÜZÜ (UI) BİLEŞENLERİ ---
 class Button:
     def __init__(self, x, y, w, h, text, font, toggleable=False):
         self.rect = pygame.Rect(x, y, w, h)
@@ -186,7 +183,6 @@ class Button:
             self.checked = not self.checked
         return True
 
-# --- LABİRENT & OYUN MOTORU ---
 class GridInstance:
     def __init__(self, base_grid, rect, algo_name, algo_func, start, end, rows, cols):
         self.grid = [row[:] for row in base_grid]
@@ -290,7 +286,6 @@ class Engine:
             else:
                 stack.pop()
                 
-        # Algoritmaları daha iyi kıyaslamak için rastgele kestirmeler ve açık alanlar yaratıyoruz
         walls_to_break = (self.rows * self.cols) // 15
         for _ in range(walls_to_break):
             r = random.randint(1, self.rows - 2)
